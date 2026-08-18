@@ -14,6 +14,7 @@ body: |
   ; GCN-NEXT: {{  $}}
   ; GCN-NEXT:   $sgpr64_sgpr65 = S_MOV_B64 0
   ; GCN-NEXT:   V_NOP_e32 implicit $exec
+  ; GCN-NEXT:   S_SETREG_IMM32_B32 1, 1601, implicit-def $mode, implicit $mode
   ; GCN-NEXT:   GLOBAL_PREFETCH_B8_SADDR $sgpr64_sgpr65, undef $vgpr0, 0, 8, implicit $exec
   ; GCN-NEXT:   GLOBAL_STORE_DWORD killed $vgpr0_vgpr1, $vgpr2, 0, 0, implicit $exec
   ; GCN-NEXT:   S_CBRANCH_SCC1 %bb.2, implicit $scc
@@ -80,6 +81,7 @@ body: |
   ; GCN-NEXT: {{  $}}
   ; GCN-NEXT:   $sgpr64_sgpr65 = S_MOV_B64 0
   ; GCN-NEXT:   V_NOP_e32 implicit $exec
+  ; GCN-NEXT:   S_SETREG_IMM32_B32 1, 1601, implicit-def $mode, implicit $mode
   ; GCN-NEXT:   GLOBAL_PREFETCH_B8_SADDR $sgpr64_sgpr65, undef $vgpr0, 0, 8, implicit $exec
   ; GCN-NEXT:   GLOBAL_STORE_DWORD killed $vgpr0_vgpr1, $vgpr2, 0, 0, implicit $exec
   ; GCN-NEXT:   S_SETPC_B64 $sgpr0_sgpr1
@@ -114,6 +116,7 @@ body: |
     ; GCN-NEXT: {{  $}}
     ; GCN-NEXT: $sgpr64_sgpr65 = S_MOV_B64 0
     ; GCN-NEXT: V_NOP_e32 implicit $exec
+    ; GCN-NEXT: S_SETREG_IMM32_B32 1, 1601, implicit-def $mode, implicit $mode
     ; GCN-NEXT: GLOBAL_PREFETCH_B8_SADDR $sgpr64_sgpr65, undef $vgpr0, 0, 8, implicit $exec
     ; GCN-NEXT: GLOBAL_STORE_DWORD killed $vgpr0_vgpr1, $vgpr2, 0, 0, implicit $exec
     ; GCN-NEXT: S_TRAP 0
@@ -138,6 +141,7 @@ body: |
     ; GCN-NEXT: {{  $}}
     ; GCN-NEXT: $sgpr64_sgpr65 = S_MOV_B64 0
     ; GCN-NEXT: V_NOP_e32 implicit $exec
+    ; GCN-NEXT: S_SETREG_IMM32_B32 1, 1601, implicit-def $mode, implicit $mode
     ; GCN-NEXT: GLOBAL_PREFETCH_B8_SADDR $sgpr64_sgpr65, undef $vgpr0, 0, 8, implicit $exec
     ; GCN-NEXT: GLOBAL_STORE_DWORD killed $vgpr0_vgpr1, $vgpr2, 0, 0, implicit $exec
     ; GCN-NEXT: $sgpr0 = S_GETREG_B32 1, implicit $mode
@@ -162,6 +166,7 @@ body: |
     ; GCN-NEXT: {{  $}}
     ; GCN-NEXT: $sgpr64_sgpr65 = S_MOV_B64 0
     ; GCN-NEXT: V_NOP_e32 implicit $exec
+    ; GCN-NEXT: S_SETREG_IMM32_B32 1, 1601, implicit-def $mode, implicit $mode
     ; GCN-NEXT: GLOBAL_PREFETCH_B8_SADDR $sgpr64_sgpr65, undef $vgpr0, 0, 8, implicit $exec
     ; GCN-NEXT: GLOBAL_STORE_DWORD killed $vgpr0_vgpr1, $vgpr2, 0, 0, implicit $exec
     ; GCN-NEXT: S_SETREG_B32 $sgpr0, 1, implicit-def $mode, implicit $mode
@@ -186,6 +191,7 @@ body: |
     ; GCN-NEXT: {{  $}}
     ; GCN-NEXT: $sgpr64_sgpr65 = S_MOV_B64 0
     ; GCN-NEXT: V_NOP_e32 implicit $exec
+    ; GCN-NEXT: S_SETREG_IMM32_B32 1, 1601, implicit-def $mode, implicit $mode
     ; GCN-NEXT: GLOBAL_PREFETCH_B8_SADDR $sgpr64_sgpr65, undef $vgpr0, 0, 8, implicit $exec
     ; GCN-NEXT: GLOBAL_STORE_DWORD killed $vgpr0_vgpr1, $vgpr2, 0, 0, implicit $exec
     ; GCN-NEXT: S_SETREG_B32_mode $sgpr0, 1, implicit-def $mode, implicit $mode
@@ -210,6 +216,7 @@ body: |
     ; GCN-NEXT: {{  $}}
     ; GCN-NEXT: $sgpr64_sgpr65 = S_MOV_B64 0
     ; GCN-NEXT: V_NOP_e32 implicit $exec
+    ; GCN-NEXT: S_SETREG_IMM32_B32 1, 1601, implicit-def $mode, implicit $mode
     ; GCN-NEXT: GLOBAL_PREFETCH_B8_SADDR $sgpr64_sgpr65, undef $vgpr0, 0, 8, implicit $exec
     ; GCN-NEXT: GLOBAL_STORE_DWORD killed $vgpr0_vgpr1, $vgpr2, 0, 0, implicit $exec
     ; GCN-NEXT: S_SETREG_IMM32_B32 0, 1, implicit-def $mode, implicit $mode
@@ -234,6 +241,7 @@ body: |
     ; GCN-NEXT: {{  $}}
     ; GCN-NEXT: $sgpr64_sgpr65 = S_MOV_B64 0
     ; GCN-NEXT: V_NOP_e32 implicit $exec
+    ; GCN-NEXT: S_SETREG_IMM32_B32 1, 1601, implicit-def $mode, implicit $mode
     ; GCN-NEXT: GLOBAL_PREFETCH_B8_SADDR $sgpr64_sgpr65, undef $vgpr0, 0, 8, implicit $exec
     ; GCN-NEXT: GLOBAL_STORE_DWORD killed $vgpr0_vgpr1, $vgpr2, 0, 0, implicit $exec
     ; GCN-NEXT: S_SETREG_IMM32_B32_mode 0, 1, implicit-def $mode, implicit $mode
@@ -258,6 +266,7 @@ body: |
     ; GCN-NEXT: {{  $}}
     ; GCN-NEXT: $sgpr64_sgpr65 = S_MOV_B64 0
     ; GCN-NEXT: V_NOP_e32 implicit $exec
+    ; GCN-NEXT: S_SETREG_IMM32_B32 1, 1601, implicit-def $mode, implicit $mode
     ; GCN-NEXT: GLOBAL_PREFETCH_B8_SADDR $sgpr64_sgpr65, undef $vgpr0, 0, 8, implicit $exec
     ; GCN-NEXT: GLOBAL_STORE_DWORD killed $vgpr0_vgpr1, $vgpr2, 0, 0, implicit $exec
     ; GCN-NEXT: S_SENDMSG 1, implicit $exec, implicit $m0
@@ -282,6 +291,7 @@ body: |
     ; GCN-NEXT: {{  $}}
     ; GCN-NEXT: $sgpr64_sgpr65 = S_MOV_B64 0
     ; GCN-NEXT: V_NOP_e32 implicit $exec
+    ; GCN-NEXT: S_SETREG_IMM32_B32 1, 1601, implicit-def $mode, implicit $mode
     ; GCN-NEXT: GLOBAL_PREFETCH_B8_SADDR $sgpr64_sgpr65, undef $vgpr0, 0, 8, implicit $exec
     ; GCN-NEXT: GLOBAL_STORE_DWORD killed $vgpr0_vgpr1, $vgpr2, 0, 0, implicit $exec
     ; GCN-NEXT: S_SENDMSGHALT 1, implicit $exec, implicit $m0
@@ -306,6 +316,7 @@ body: |
     ; GCN-NEXT: {{  $}}
     ; GCN-NEXT: $sgpr64_sgpr65 = S_MOV_B64 0
     ; GCN-NEXT: V_NOP_e32 implicit $exec
+    ; GCN-NEXT: S_SETREG_IMM32_B32 1, 1601, implicit-def $mode, implicit $mode
     ; GCN-NEXT: GLOBAL_PREFETCH_B8_SADDR $sgpr64_sgpr65, undef $vgpr0, 0, 8, implicit $exec
     ; GCN-NEXT: GLOBAL_STORE_DWORD killed $vgpr0_vgpr1, $vgpr2, 0, 0, implicit $exec
     ; GCN-NEXT: $sgpr0 = S_SENDMSG_RTN_B32 1
@@ -330,6 +341,7 @@ body: |
     ; GCN-NEXT: {{  $}}
     ; GCN-NEXT: $sgpr64_sgpr65 = S_MOV_B64 0
     ; GCN-NEXT: V_NOP_e32 implicit $exec
+    ; GCN-NEXT: S_SETREG_IMM32_B32 1, 1601, implicit-def $mode, implicit $mode
     ; GCN-NEXT: GLOBAL_PREFETCH_B8_SADDR $sgpr64_sgpr65, undef $vgpr0, 0, 8, implicit $exec
     ; GCN-NEXT: GLOBAL_STORE_DWORD killed $vgpr0_vgpr1, $vgpr2, 0, 0, implicit $exec
     ; GCN-NEXT: $sgpr0_sgpr1 = S_SENDMSG_RTN_B64 1
@@ -354,6 +366,7 @@ body: |
     ; GCN-NEXT: {{  $}}
     ; GCN-NEXT: $sgpr64_sgpr65 = S_MOV_B64 0
     ; GCN-NEXT: V_NOP_e32 implicit $exec
+    ; GCN-NEXT: S_SETREG_IMM32_B32 1, 1601, implicit-def $mode, implicit $mode
     ; GCN-NEXT: GLOBAL_PREFETCH_B8_SADDR $sgpr64_sgpr65, undef $vgpr0, 0, 8, implicit $exec
     ; GCN-NEXT: GLOBAL_STORE_DWORD killed $vgpr0_vgpr1, $vgpr2, 0, 0, implicit $exec
     ; GCN-NEXT: S_BARRIER_WAIT 1
@@ -378,6 +391,7 @@ body: |
     ; GCN-NEXT: {{  $}}
     ; GCN-NEXT: $sgpr64_sgpr65 = S_MOV_B64 0
     ; GCN-NEXT: V_NOP_e32 implicit $exec
+    ; GCN-NEXT: S_SETREG_IMM32_B32 1, 1601, implicit-def $mode, implicit $mode
     ; GCN-NEXT: GLOBAL_PREFETCH_B8_SADDR $sgpr64_sgpr65, undef $vgpr0, 0, 8, implicit $exec
     ; GCN-NEXT: GLOBAL_STORE_DWORD killed $vgpr0_vgpr1, $vgpr2, 0, 0, implicit $exec
     ; GCN-NEXT: S_BARRIER_SIGNAL_M0 implicit $m0
@@ -402,6 +416,7 @@ body: |
     ; GCN-NEXT: {{  $}}
     ; GCN-NEXT: $sgpr64_sgpr65 = S_MOV_B64 0
     ; GCN-NEXT: V_NOP_e32 implicit $exec
+    ; GCN-NEXT: S_SETREG_IMM32_B32 1, 1601, implicit-def $mode, implicit $mode
     ; GCN-NEXT: GLOBAL_PREFETCH_B8_SADDR $sgpr64_sgpr65, undef $vgpr0, 0, 8, implicit $exec
     ; GCN-NEXT: GLOBAL_STORE_DWORD killed $vgpr0_vgpr1, $vgpr2, 0, 0, implicit $exec
     ; GCN-NEXT: S_BARRIER_SIGNAL_IMM 1
@@ -426,6 +441,7 @@ body: |
     ; GCN-NEXT: {{  $}}
     ; GCN-NEXT: $sgpr64_sgpr65 = S_MOV_B64 0
     ; GCN-NEXT: V_NOP_e32 implicit $exec
+    ; GCN-NEXT: S_SETREG_IMM32_B32 1, 1601, implicit-def $mode, implicit $mode
     ; GCN-NEXT: GLOBAL_PREFETCH_B8_SADDR $sgpr64_sgpr65, undef $vgpr0, 0, 8, implicit $exec
     ; GCN-NEXT: GLOBAL_STORE_DWORD killed $vgpr0_vgpr1, $vgpr2, 0, 0, implicit $exec
     ; GCN-NEXT: S_BARRIER_SIGNAL_ISFIRST_M0 implicit $m0, implicit-def $scc, implicit $scc
@@ -450,6 +466,7 @@ body: |
     ; GCN-NEXT: {{  $}}
     ; GCN-NEXT: $sgpr64_sgpr65 = S_MOV_B64 0
     ; GCN-NEXT: V_NOP_e32 implicit $exec
+    ; GCN-NEXT: S_SETREG_IMM32_B32 1, 1601, implicit-def $mode, implicit $mode
     ; GCN-NEXT: GLOBAL_PREFETCH_B8_SADDR $sgpr64_sgpr65, undef $vgpr0, 0, 8, implicit $exec
     ; GCN-NEXT: GLOBAL_STORE_DWORD killed $vgpr0_vgpr1, $vgpr2, 0, 0, implicit $exec
     ; GCN-NEXT: S_BARRIER_SIGNAL_ISFIRST_IMM 1, implicit-def $scc, implicit $scc

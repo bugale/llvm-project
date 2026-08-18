@@ -937,7 +937,7 @@ void SIFrameLowering::emitEntryFunctionPrologue(MachineFunction &MF,
                                          ScratchRsrcReg, ScratchWaveOffsetReg);
   }
 
-  if (ST.hasWaitXcnt()) {
+  if (ST.hasWaitXcnt() && !ST.hasRequiresInitialUnclausedVmem()) {
     // Set REPLAY_MODE (bit 25) in MODE register to enable multi-group XNACK
     // replay. This aligns hardware behavior with the compiler's s_wait_xcnt
     // insertion logic, which assumes multi-group mode by default.

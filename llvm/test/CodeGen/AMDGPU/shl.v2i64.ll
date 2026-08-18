@@ -7,8 +7,8 @@ define amdgpu_kernel void @s_shl_v2i64(ptr addrspace(1) %out, <2 x i64> %lhs, <2
 ; GFX1250:       ; %bb.0:
 ; GFX1250-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX1250-NEXT:    v_nop
-; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_clause 0x1
 ; GFX1250-NEXT:    s_load_b256 s[8:15], s[4:5], 0x34 nv
 ; GFX1250-NEXT:    s_load_b64 s[0:1], s[4:5], 0x24 nv
@@ -25,8 +25,8 @@ define amdgpu_kernel void @s_shl_v2i64(ptr addrspace(1) %out, <2 x i64> %lhs, <2
 ; GFX1251:       ; %bb.0:
 ; GFX1251-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX1251-NEXT:    v_nop
-; GFX1251-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1251-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX1251-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1251-NEXT:    s_clause 0x1
 ; GFX1251-NEXT:    s_load_b256 s[8:15], s[4:5], 0x34 nv
 ; GFX1251-NEXT:    s_load_b64 s[0:1], s[4:5], 0x24 nv
@@ -48,8 +48,8 @@ define amdgpu_kernel void @s_shl_v2i64_s_imm(ptr addrspace(1) %out, <2 x i64> %l
 ; GFX1250:       ; %bb.0:
 ; GFX1250-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX1250-NEXT:    v_nop
-; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_clause 0x1
 ; GFX1250-NEXT:    s_load_b128 s[0:3], s[4:5], 0x34 nv
 ; GFX1250-NEXT:    s_load_b64 s[6:7], s[4:5], 0x24 nv
@@ -66,8 +66,8 @@ define amdgpu_kernel void @s_shl_v2i64_s_imm(ptr addrspace(1) %out, <2 x i64> %l
 ; GFX1251:       ; %bb.0:
 ; GFX1251-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX1251-NEXT:    v_nop
-; GFX1251-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1251-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX1251-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1251-NEXT:    s_clause 0x1
 ; GFX1251-NEXT:    s_load_b128 s[0:3], s[4:5], 0x34 nv
 ; GFX1251-NEXT:    s_load_b64 s[6:7], s[4:5], 0x24 nv
@@ -89,8 +89,8 @@ define amdgpu_kernel void @s_shl_v2i64_imm_s(ptr addrspace(1) %out, <2 x i64> %r
 ; GFX1250:       ; %bb.0:
 ; GFX1250-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX1250-NEXT:    v_nop
-; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_clause 0x1
 ; GFX1250-NEXT:    s_load_b128 s[0:3], s[4:5], 0x34 nv
 ; GFX1250-NEXT:    s_load_b64 s[6:7], s[4:5], 0x24 nv
@@ -107,8 +107,8 @@ define amdgpu_kernel void @s_shl_v2i64_imm_s(ptr addrspace(1) %out, <2 x i64> %r
 ; GFX1251:       ; %bb.0:
 ; GFX1251-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX1251-NEXT:    v_nop
-; GFX1251-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1251-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX1251-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1251-NEXT:    s_clause 0x1
 ; GFX1251-NEXT:    s_load_b128 s[0:3], s[4:5], 0x34 nv
 ; GFX1251-NEXT:    s_load_b64 s[6:7], s[4:5], 0x24 nv
@@ -130,8 +130,8 @@ define amdgpu_kernel void @v_shl_v2i64(ptr addrspace(1) %out, ptr addrspace(1) %
 ; GCN:       ; %bb.0:
 ; GCN-NEXT:    s_mov_b64 s[64:65], 0
 ; GCN-NEXT:    v_nop
-; GCN-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GCN-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GCN-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GCN-NEXT:    s_load_b128 s[0:3], s[4:5], 0x24 nv
 ; GCN-NEXT:    v_and_b32_e32 v8, 0x3ff, v0
 ; GCN-NEXT:    s_wait_kmcnt 0x0
@@ -160,8 +160,8 @@ define amdgpu_kernel void @shl_v_s_v2i64(ptr addrspace(1) %out, ptr addrspace(1)
 ; GCN:       ; %bb.0:
 ; GCN-NEXT:    s_mov_b64 s[64:65], 0
 ; GCN-NEXT:    v_nop
-; GCN-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GCN-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GCN-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GCN-NEXT:    s_load_b256 s[8:15], s[4:5], 0x24 nv
 ; GCN-NEXT:    v_and_b32_e32 v4, 0x3ff, v0
 ; GCN-NEXT:    s_wait_kmcnt 0x0
@@ -186,8 +186,8 @@ define amdgpu_kernel void @shl_s_v_v2i64(ptr addrspace(1) %out, ptr addrspace(1)
 ; GCN:       ; %bb.0:
 ; GCN-NEXT:    s_mov_b64 s[64:65], 0
 ; GCN-NEXT:    v_nop
-; GCN-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GCN-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GCN-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GCN-NEXT:    s_load_b256 s[8:15], s[4:5], 0x24 nv
 ; GCN-NEXT:    v_and_b32_e32 v4, 0x3ff, v0
 ; GCN-NEXT:    s_wait_kmcnt 0x0
@@ -212,8 +212,8 @@ define amdgpu_kernel void @shl_imm_v_v2i64(ptr addrspace(1) %out, ptr addrspace(
 ; GCN:       ; %bb.0:
 ; GCN-NEXT:    s_mov_b64 s[64:65], 0
 ; GCN-NEXT:    v_nop
-; GCN-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GCN-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GCN-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GCN-NEXT:    s_load_b128 s[0:3], s[4:5], 0x24 nv
 ; GCN-NEXT:    v_and_b32_e32 v4, 0x3ff, v0
 ; GCN-NEXT:    s_wait_kmcnt 0x0
@@ -238,8 +238,8 @@ define amdgpu_kernel void @shl_v_imm_v2i64(ptr addrspace(1) %out, ptr addrspace(
 ; GCN:       ; %bb.0:
 ; GCN-NEXT:    s_mov_b64 s[64:65], 0
 ; GCN-NEXT:    v_nop
-; GCN-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GCN-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GCN-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GCN-NEXT:    s_load_b128 s[0:3], s[4:5], 0x24 nv
 ; GCN-NEXT:    v_and_b32_e32 v4, 0x3ff, v0
 ; GCN-NEXT:    s_wait_kmcnt 0x0
@@ -264,8 +264,8 @@ define amdgpu_kernel void @v_shl_v4i64(ptr addrspace(1) %out, ptr addrspace(1) %
 ; GCN:       ; %bb.0:
 ; GCN-NEXT:    s_mov_b64 s[64:65], 0
 ; GCN-NEXT:    v_nop
-; GCN-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GCN-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GCN-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GCN-NEXT:    s_load_b128 s[0:3], s[4:5], 0x24 nv
 ; GCN-NEXT:    v_and_b32_e32 v0, 0x3ff, v0
 ; GCN-NEXT:    s_delay_alu instid0(VALU_DEP_1)
@@ -303,8 +303,8 @@ define amdgpu_kernel void @shl_v_imm_v4i64(ptr addrspace(1) %out, ptr addrspace(
 ; GCN:       ; %bb.0:
 ; GCN-NEXT:    s_mov_b64 s[64:65], 0
 ; GCN-NEXT:    v_nop
-; GCN-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GCN-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GCN-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GCN-NEXT:    s_load_b128 s[0:3], s[4:5], 0x24 nv
 ; GCN-NEXT:    v_and_b32_e32 v0, 0x3ff, v0
 ; GCN-NEXT:    s_delay_alu instid0(VALU_DEP_1)
@@ -338,8 +338,8 @@ define amdgpu_kernel void @v_shl_v8i64(ptr addrspace(1) %out, ptr addrspace(1) %
 ; GCN:       ; %bb.0:
 ; GCN-NEXT:    s_mov_b64 s[64:65], 0
 ; GCN-NEXT:    v_nop
-; GCN-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GCN-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GCN-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GCN-NEXT:    s_load_b128 s[0:3], s[4:5], 0x24 nv
 ; GCN-NEXT:    v_and_b32_e32 v0, 0x3ff, v0
 ; GCN-NEXT:    s_delay_alu instid0(VALU_DEP_1)
@@ -389,8 +389,8 @@ define amdgpu_kernel void @v_shl_v16i64(ptr addrspace(1) %out, ptr addrspace(1) 
 ; GFX1250:       ; %bb.0:
 ; GFX1250-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX1250-NEXT:    v_nop
-; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_load_b128 s[0:3], s[4:5], 0x24 nv
 ; GFX1250-NEXT:    v_and_b32_e32 v0, 0x3ff, v0
 ; GFX1250-NEXT:    s_delay_alu instid0(VALU_DEP_1)
@@ -452,8 +452,8 @@ define amdgpu_kernel void @v_shl_v16i64(ptr addrspace(1) %out, ptr addrspace(1) 
 ; GFX1251:       ; %bb.0:
 ; GFX1251-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX1251-NEXT:    v_nop
-; GFX1251-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1251-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX1251-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1251-NEXT:    s_load_b128 s[0:3], s[4:5], 0x24 nv
 ; GFX1251-NEXT:    v_and_b32_e32 v0, 0x3ff, v0
 ; GFX1251-NEXT:    s_delay_alu instid0(VALU_DEP_1)
@@ -529,8 +529,8 @@ define amdgpu_kernel void @v_shl_v32i64(ptr addrspace(1) %out, ptr addrspace(1) 
 ; GFX1250:       ; %bb.0:
 ; GFX1250-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX1250-NEXT:    v_nop
-; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_load_b128 s[0:3], s[4:5], 0x24 nv
 ; GFX1250-NEXT:    v_and_b32_e32 v0, 0x3ff, v0
 ; GFX1250-NEXT:    s_delay_alu instid0(VALU_DEP_1)
@@ -642,8 +642,8 @@ define amdgpu_kernel void @v_shl_v32i64(ptr addrspace(1) %out, ptr addrspace(1) 
 ; GFX1251:       ; %bb.0:
 ; GFX1251-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX1251-NEXT:    v_nop
-; GFX1251-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1251-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX1251-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1251-NEXT:    s_load_b128 s[0:3], s[4:5], 0x24 nv
 ; GFX1251-NEXT:    v_and_b32_e32 v0, 0x3ff, v0
 ; GFX1251-NEXT:    s_delay_alu instid0(VALU_DEP_1)

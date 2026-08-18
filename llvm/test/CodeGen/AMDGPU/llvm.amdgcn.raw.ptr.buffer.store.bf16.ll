@@ -36,8 +36,8 @@ define amdgpu_ps void @buffer_store_bf16(ptr addrspace(8) inreg %rsrc, bfloat %d
 ; GFX12:       ; %bb.0:
 ; GFX12-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX12-NEXT:    v_nop
-; GFX12-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX12-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX12-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX12-NEXT:    buffer_store_b16 v0, v1, s[0:3], null offen
 ; GFX12-NEXT:    s_endpgm
   call void @llvm.amdgcn.raw.ptr.buffer.store.bf16(bfloat %data, ptr addrspace(8) %rsrc, i32 %offset, i32 0, i32 0)
@@ -74,8 +74,8 @@ define amdgpu_ps void @buffer_store_v2bf16(ptr addrspace(8) inreg %rsrc, <2 x bf
 ; GFX12:       ; %bb.0:
 ; GFX12-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX12-NEXT:    v_nop
-; GFX12-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX12-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX12-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX12-NEXT:    buffer_store_b32 v0, v1, s[0:3], null offen
 ; GFX12-NEXT:    s_endpgm
   call void @llvm.amdgcn.raw.ptr.buffer.store.v2bf16(<2 x bfloat> %data, ptr addrspace(8) %rsrc, i32 %offset, i32 0, i32 0)
@@ -112,8 +112,8 @@ define amdgpu_ps void @buffer_store_v4bf16(ptr addrspace(8) inreg %rsrc, <4 x bf
 ; GFX12:       ; %bb.0:
 ; GFX12-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX12-NEXT:    v_nop
-; GFX12-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX12-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX12-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX12-NEXT:    buffer_store_b64 v[0:1], v2, s[0:3], null offen
 ; GFX12-NEXT:    s_endpgm
   call void @llvm.amdgcn.raw.ptr.buffer.store.v4bf16(<4 x bfloat> %data, ptr addrspace(8) %rsrc, i32 %offset, i32 0, i32 0)
@@ -156,8 +156,8 @@ define amdgpu_ps void @buffer_store_v8bf16(ptr addrspace(8) inreg %rsrc, <8 x bf
 ; GFX12:       ; %bb.0:
 ; GFX12-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX12-NEXT:    v_nop
-; GFX12-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX12-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX12-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX12-NEXT:    buffer_store_b128 v[0:3], v4, s[0:3], null offen
 ; GFX12-NEXT:    s_endpgm
   call void @llvm.amdgcn.raw.ptr.buffer.store.v8bf16(<8 x bfloat> %data, ptr addrspace(8) %rsrc, i32 %offset, i32 0, i32 0)

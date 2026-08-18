@@ -11,8 +11,8 @@ define amdgpu_ps void @cluster_load_b32_vaddr(ptr addrspace(1) %addr, ptr addrsp
 ; GFX1250:       ; %bb.0: ; %entry
 ; GFX1250-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX1250-NEXT:    v_nop
-; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    v_readfirstlane_b32 s0, v4
 ; GFX1250-NEXT:    s_mov_b32 m0, s0
 ; GFX1250-NEXT:    cluster_load_b32 v0, v[0:1], off offset:32 th:TH_LOAD_NT
@@ -31,8 +31,8 @@ define amdgpu_ps void @cluster_load_b32_vaddr_imm_mask(ptr addrspace(1) %addr, p
 ; GFX1250:       ; %bb.0: ; %entry
 ; GFX1250-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX1250-NEXT:    v_nop
-; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_mov_b32 m0, 7
 ; GFX1250-NEXT:    cluster_load_b32 v0, v[0:1], off offset:32 th:TH_LOAD_HT scope:SCOPE_SE
 ; GFX1250-NEXT:    s_wait_loadcnt 0x0
@@ -50,8 +50,8 @@ define amdgpu_ps void @cluster_load_b32_saddr(ptr addrspace(1) inreg %addr, ptr 
 ; GFX1250:       ; %bb.0: ; %entry
 ; GFX1250-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX1250-NEXT:    v_nop
-; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    v_mov_b32_e32 v2, 0
 ; GFX1250-NEXT:    s_mov_b32 m0, s2
 ; GFX1250-NEXT:    cluster_load_b32 v2, v2, s[0:1] offset:32 th:TH_LOAD_NT_HT scope:SCOPE_DEV
@@ -70,8 +70,8 @@ define amdgpu_ps void @cluster_load_monitor_b32_saddr_scale_offset(ptr addrspace
 ; GFX1250:       ; %bb.0: ; %entry
 ; GFX1250-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX1250-NEXT:    v_nop
-; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_mov_b32 m0, s2
 ; GFX1250-NEXT:    cluster_load_b32 v2, v2, s[0:1] scale_offset th:TH_LOAD_BYPASS scope:SCOPE_SYS
 ; GFX1250-NEXT:    s_wait_loadcnt 0x0
@@ -90,8 +90,8 @@ define amdgpu_ps void @cluster_load_b64_vaddr(ptr addrspace(1) %addr, ptr addrsp
 ; GFX1250:       ; %bb.0: ; %entry
 ; GFX1250-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX1250-NEXT:    v_nop
-; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    v_readfirstlane_b32 s0, v4
 ; GFX1250-NEXT:    s_mov_b32 m0, s0
 ; GFX1250-NEXT:    cluster_load_b64 v[0:1], v[0:1], off offset:32 th:TH_LOAD_NT
@@ -110,8 +110,8 @@ define amdgpu_ps void @cluster_load_b64_vaddr_imm_mask(ptr addrspace(1) %addr, p
 ; GFX1250:       ; %bb.0: ; %entry
 ; GFX1250-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX1250-NEXT:    v_nop
-; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_mov_b32 m0, 0x10007
 ; GFX1250-NEXT:    cluster_load_b64 v[0:1], v[0:1], off offset:32 th:TH_LOAD_HT scope:SCOPE_SE
 ; GFX1250-NEXT:    s_wait_loadcnt 0x0
@@ -129,8 +129,8 @@ define amdgpu_ps void @cluster_load_b64_saddr(ptr addrspace(1) inreg %addr, ptr 
 ; GFX1250:       ; %bb.0: ; %entry
 ; GFX1250-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX1250-NEXT:    v_nop
-; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    v_mov_b32_e32 v2, 0
 ; GFX1250-NEXT:    s_mov_b32 m0, s2
 ; GFX1250-NEXT:    cluster_load_b64 v[2:3], v2, s[0:1] offset:32 th:TH_LOAD_NT_HT scope:SCOPE_DEV
@@ -149,8 +149,8 @@ define amdgpu_ps void @cluster_load_monitor_b64_saddr_scale_offset(ptr addrspace
 ; GFX1250:       ; %bb.0: ; %entry
 ; GFX1250-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX1250-NEXT:    v_nop
-; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_mov_b32 m0, s2
 ; GFX1250-NEXT:    cluster_load_b64 v[2:3], v2, s[0:1] scale_offset th:TH_LOAD_BYPASS scope:SCOPE_SYS
 ; GFX1250-NEXT:    s_wait_loadcnt 0x0
@@ -169,8 +169,8 @@ define amdgpu_ps void @cluster_load_b128_vaddr(ptr addrspace(1) %addr, ptr addrs
 ; GFX1250:       ; %bb.0: ; %entry
 ; GFX1250-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX1250-NEXT:    v_nop
-; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    v_readfirstlane_b32 s0, v4
 ; GFX1250-NEXT:    s_mov_b32 m0, s0
 ; GFX1250-NEXT:    cluster_load_b128 v[4:7], v[0:1], off offset:32 th:TH_LOAD_NT
@@ -189,8 +189,8 @@ define amdgpu_ps void @cluster_load_b128_vaddr_imm_mask(ptr addrspace(1) %addr, 
 ; GFX1250:       ; %bb.0: ; %entry
 ; GFX1250-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX1250-NEXT:    v_nop
-; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_mov_b32 m0, 15
 ; GFX1250-NEXT:    cluster_load_b128 v[4:7], v[0:1], off offset:32 th:TH_LOAD_HT scope:SCOPE_SE
 ; GFX1250-NEXT:    s_wait_loadcnt 0x0
@@ -208,8 +208,8 @@ define amdgpu_ps void @cluster_load_b128_saddr(ptr addrspace(1) inreg %addr, ptr
 ; GFX1250:       ; %bb.0: ; %entry
 ; GFX1250-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX1250-NEXT:    v_nop
-; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    v_mov_b32_e32 v2, 0
 ; GFX1250-NEXT:    s_mov_b32 m0, s2
 ; GFX1250-NEXT:    cluster_load_b128 v[2:5], v2, s[0:1] offset:32 th:TH_LOAD_BYPASS scope:SCOPE_SYS
@@ -227,8 +227,8 @@ define amdgpu_ps void @cluster_load_b32_saddr_vmask(ptr addrspace(1) inreg %addr
 ; GFX1250:       ; %bb.0: ; %entry
 ; GFX1250-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX1250-NEXT:    v_nop
-; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    v_readfirstlane_b32 s2, v2
 ; GFX1250-NEXT:    v_mov_b32_e32 v2, 0
 ; GFX1250-NEXT:    s_mov_b32 m0, s2
@@ -248,8 +248,8 @@ define amdgpu_ps void @cluster_load_b64_saddr_vmask(ptr addrspace(1) inreg %addr
 ; GFX1250:       ; %bb.0: ; %entry
 ; GFX1250-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX1250-NEXT:    v_nop
-; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    v_readfirstlane_b32 s2, v2
 ; GFX1250-NEXT:    v_mov_b32_e32 v2, 0
 ; GFX1250-NEXT:    s_mov_b32 m0, s2
@@ -269,8 +269,8 @@ define amdgpu_ps void @cluster_load_b128_saddr_vmask(ptr addrspace(1) inreg %add
 ; GFX1250:       ; %bb.0: ; %entry
 ; GFX1250-NEXT:    s_mov_b64 s[64:65], 0
 ; GFX1250-NEXT:    v_nop
-; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    s_setreg_imm32_b32 hwreg(HW_REG_WAVE_MODE, 25, 1), 1 ; msbs: dst=0 src0=0 src1=0 src2=0
+; GFX1250-NEXT:    global_prefetch_b8 v0, s[64:65] scope:SCOPE_SE
 ; GFX1250-NEXT:    v_readfirstlane_b32 s2, v2
 ; GFX1250-NEXT:    v_mov_b32_e32 v2, 0
 ; GFX1250-NEXT:    s_mov_b32 m0, s2

@@ -3709,12 +3709,18 @@ bool SIInsertWaitcnts::run() {
     // Hardware entrypoints must begin with a specific sequence:
     //   S_MOV_B64 S[64:65], 0
     //   V_NOP
+    //   S_SETREG_IMM32_B32 HW_REG_WAVE_MODE.REPLAY_MODE, 1
     //   GLOBAL_PREFETCH_B8 V0, S[64:65] SCOPE:SCOPE_SE TH:TH_LOAD_RT
     MachineBasicBlock::iterator I = EntryBB.begin();
     BuildMI(EntryBB, I, DebugLoc(), TII.get(AMDGPU::S_MOV_B64),
             AMDGPU::SGPR64_SGPR65)
         .addImm(0);
     BuildMI(EntryBB, I, DebugLoc(), TII.get(AMDGPU::V_NOP_e32));
+    unsigned RegEncoding =
+        AMDGPU::Hwreg::HwregEncoding::encode(AMDGPU::Hwreg::ID_MODE, 25, 1);
+    BuildMI(EntryBB, I, DebugLoc(), TII.get(AMDGPU::S_SETREG_IMM32_B32))
+        .addImm(1)
+        .addImm(RegEncoding);
     BuildMI(EntryBB, I, DebugLoc(), TII.get(AMDGPU::GLOBAL_PREFETCH_B8_SADDR))
         .addReg(AMDGPU::SGPR64_SGPR65)
         .addReg(AMDGPU::VGPR0, RegState::Undef)
